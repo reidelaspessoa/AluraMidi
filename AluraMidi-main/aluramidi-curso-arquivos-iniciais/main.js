@@ -1,14 +1,16 @@
-function tocaSomPom(){
-    document.querySelector('#som_tecla_pom').play();
+function tocaSom(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
 }
 
 const listaDeTeclas = document.querySelectorAll('.tecla');
 
-listaDeTeclas[0].onclick = tocaSomPom;
+listaDeTeclas[0].onclick = tocaSom;
 
 let contador = 0;
 
 // Estrutura de repetição - Enquanto
-while () {
-    
+while (contador < listaDeTeclas.length) {
+    listaDeTeclas[contador].onclick = tocaSomPom;
+
+    contador = contador + 1; 
 }
